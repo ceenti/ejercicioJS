@@ -4,10 +4,15 @@ var rockJson = []
 document.getElementById("buttonCute").addEventListener("click", () => {
   let name = document.getElementById("name").value
   let lastname = document.getElementById("lastname").value
-  let rockEntry = {name,lastname}
-  rockJson.push( rockEntry )
-  console.log( rockJson )
-  displayingList()
+  if(name != "" && lastname != ""){
+    let rockEntry = {name,lastname}
+    rockJson.push( rockEntry )
+    console.log( rockJson )
+    displayingList()
+  }else{
+    alert("Ingresa los datos indicados en el formulario");
+  }
+
 })
 
 const displayingList = () => {
